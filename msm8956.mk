@@ -98,6 +98,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Telephone
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    telephony-ext
+
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     libcnefeatureconfig

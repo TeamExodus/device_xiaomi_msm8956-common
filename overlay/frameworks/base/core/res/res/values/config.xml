@@ -240,7 +240,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!--integer name="config_deviceHardwareKeys">83</integer-->
+    <integer name="config_deviceHardwareKeys">83</integer>
 
     <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
@@ -266,7 +266,7 @@
          This needs to match the constants in
          policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <!--integer name="config_longPressOnHomeBehavior">3</integer-->
+    <integer name="config_longPressOnHomeBehavior">3</integer>
 
     <!-- Control the behavior when the user long presses the app switch button.
             0 - Nothing
@@ -317,6 +317,12 @@
         <item>50</item>
     </integer-array>
 
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
+
+    <!-- Whether camera shutter sound is forced or not  (country specific). -->
+    <bool name="config_camera_sound_forced">false</bool>
+
     <!-- Doze mode -->
     <bool name="config_dozeAfterScreenOff">true</bool>
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
@@ -333,13 +339,16 @@
         <item>"/system/framework/arm64/boot.oat"</item>
         <item>"/system/framework/arm64/boot-core-libart.oat"</item>
    </string-array>
+
     <!-- Flag specifying whether VoLTE is available on device -->
     <bool name="config_device_volte_available">true</bool>
- 
-    <!-- Flag specifying whether VoLTE should be available for carrier: independent of
-          carrier provisioning. If false: hard disabled. If true: then depends on carrier
-          provisioning, availability etc -->
+    <bool name="config_device_vt_available">true</bool>
+
+    <!-- Flag specifying whether VoLTE & VT should be available for 
+         carrier: independent of carrier provisioning. If false: hard disabled.
+         If true: then depends on carrier provisioning, availability etc -->
     <bool name="config_carrier_volte_available">true</bool>
+    <bool name="config_carrier_vt_available">true</bool>
 
 </resources>
 
