@@ -97,10 +97,10 @@ TARGET_TS_MAKEUP := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # CMHW
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw \
-    $(VENDOR_PATH)/cmhw
+#BOARD_USES_CYANOGEN_HARDWARE := true
+#BOARD_HARDWARE_CLASS += \
+#    hardware/cyanogen/cmhw \
+#    $(VENDOR_PATH)/cmhw
 
 # CNE
 BOARD_USES_QCNE := true
@@ -170,7 +170,7 @@ TARGET_POWERHAL_VARIANT := qcom
 TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 
 # Qualcomm
-BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_HARDWARE := false
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
