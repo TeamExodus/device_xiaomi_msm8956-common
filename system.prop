@@ -85,6 +85,10 @@ persist.rild.nitz_short_ons_3=
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# Camera
+media.camera.ts.monotonic=1
+persist.camera.HAL3.enabled=1
+
 # Radio
 DEVICE_PROVISIONED=1
 ril.subscription.types=RUIM
