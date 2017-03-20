@@ -173,17 +173,17 @@ fi
 
 case "$stack" in
     "bluez")
-	   logi "Bluetooth stack is $stack"
-	   setprop ro.qc.bluetooth.stack $stack
-	   reason=`getprop vold.decrypt`
-	   case "$reason" in
-	       "trigger_restart_framework")
-	           start dbus
-	           ;;
-	   esac
+     logi "Bluetooth stack is $stack"
+     setprop ro.qc.bluetooth.stack $stack
+     reason=`getprop vold.decrypt`
+     case "$reason" in
+         "trigger_restart_framework")
+             start dbus
+             ;;
+     esac
         ;;
     *)
-	   logi "Bluetooth stack is Bluedroid"
+     logi "Bluetooth stack is Bluedroid"
         ;;
 esac
 
