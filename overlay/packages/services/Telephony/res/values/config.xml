@@ -46,5 +46,4 @@
 
     <!-- Show Preferred Network Type options in No SIM case -->
     <bool name="config_no_sim_display_network_modes">true</bool>
-
 </resources>

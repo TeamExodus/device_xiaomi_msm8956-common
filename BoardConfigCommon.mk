@@ -112,7 +112,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 #BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
     hardware/cyanogen/cmhw \
-    $(VENDOR_PATH)/cmhw
+    device/xiaomi/msm8956-common/cmhw
 
 # CNE
 BOARD_USES_QCNE := true
@@ -156,7 +156,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 
-TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(VENDOR_PATH)/android_filesystem_config.h
+TARGET_ANDROID_FILESYSTEM_CONFIG_H := device/xiaomi/msm8956-common/android_filesystem_config.h
 
 # FM
 BOARD_HAVE_QCOM_FM := true
@@ -189,14 +189,14 @@ TARGET_PER_MGR_ENABLED := true
 TARGET_POWERHAL_VARIANT := qcom
 
 # Properties
-TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
+TARGET_SYSTEM_PROP += device/xiaomi/msm8956-common/system.prop
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := false
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/xiaomi/msm8956-common/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
@@ -208,7 +208,8 @@ TARGET_RIL_VARIANT := caf
 include device/qcom/common/common.mk
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+include device/qcom/sepolicy/Android.mk
+BOARD_SEPOLICY_DIRS += device/xiaomi/msm8956-common/sepolicy
 
 # Sensors
 USE_SENSOR_MULTI_HAL := true
