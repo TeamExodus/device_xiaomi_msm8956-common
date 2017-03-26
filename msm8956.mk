@@ -187,14 +187,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/xiaomi/msm8956-common/configs/msm_irqbalance_little_big.conf:system/vendor/etc/msm_irqbalance_little_big.conf
 
-# Libshims
-PRODUCT_PACKAGES += \
-    libshims_ims
-
-# Libshims
-PRODUCT_PACKAGES += \
-    libshims_ims
-
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8952
