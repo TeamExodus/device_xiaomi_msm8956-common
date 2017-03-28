@@ -88,6 +88,10 @@ audio.offload.pcm.16bit.enable=true
 audio.offload.pcm.24bit.enable=true
 audio.offload.video=true
 
+# Camera
+media.camera.ts.monotonic=1
+persist.camera.HAL3.enabled=1
+
 # Radio
 DEVICE_PROVISIONED=1
 ril.subscription.types=RUIM
