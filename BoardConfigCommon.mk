@@ -113,13 +113,13 @@ BOARD_HARDWARE_CLASS += \
 BOARD_USES_QCNE := true
 
 # Dex
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
+#ifeq ($(HOST_OS),linux)
+#  ifneq ($(TARGET_BUILD_VARIANT),eng)
+#    ifeq ($(WITH_DEXPREOPT),)
+#      WITH_DEXPREOPT := true
+#    endif
+#  endif
+#endif
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
 # Display
@@ -200,8 +200,11 @@ TARGET_USERIMAGES_USE_F2FS := true
 PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
 
+# Qualcomm common
+include device/qcom/common/common.mk
+
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/Android.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Sensors
