@@ -116,6 +116,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
+# Consumerir
+PRODUCT_PACKAGES += \
+    consumerir.msm8952
+
 # DataServices
 PRODUCT_PACKAGES += \
     librmnetctl
@@ -230,6 +234,10 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.usb.rc \
     ueventd.qcom.rc
+
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_xiaomi
 
 # Sensors
 PRODUCT_PACKAGES += \
